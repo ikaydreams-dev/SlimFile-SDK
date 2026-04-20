@@ -2,6 +2,8 @@
 
 Official JavaScript/TypeScript SDK for the [SlimFile API](https://api.slim-file.com) — compress images, PDFs, and Office documents programmatically with **up to 95% file size reduction without quality loss**.
 
+> **Node.js only.** This SDK is designed for server-side environments (Node.js ≥18, Bun, Deno with Node compat). It is not compatible with browsers, React Native, or edge runtimes. Never expose your API key in frontend code.
+
 [![npm version](https://img.shields.io/npm/v/@slimfile/sdk)](https://www.npmjs.com/package/@slimfile/sdk)
 [![npm downloads](https://img.shields.io/npm/dm/@slimfile/sdk)](https://www.npmjs.com/package/@slimfile/sdk)
 [![Node.js](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen)](https://nodejs.org)
@@ -65,7 +67,7 @@ Official JavaScript/TypeScript SDK for the [SlimFile API](https://api.slim-file.
 
 ## Requirements
 
-- Node.js **18.0.0 or higher**
+- Node.js **18.0.0 or higher** (server-side only — not for browser use)
 - A SlimFile API key — [get one here](https://api.slim-file.com)
 
 ---
