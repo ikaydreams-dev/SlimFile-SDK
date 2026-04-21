@@ -1,6 +1,6 @@
 {
   "name": "@slimfile/sdk",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Official JavaScript/TypeScript SDK for the SlimFile API — compress images, PDFs, and Office documents programmatically with up to 95% file size reduction.",
   "type": "module",
   "main": "./dist/index.cjs",
