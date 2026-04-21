@@ -134,7 +134,7 @@ const client = new SlimFileClient(options?)
 | Option | Type | Default | Description |
 |--------|------|---------|-------------|
 | `apiKey` | `string` | `process.env.SLIMFILE_API_KEY` | Your SlimFile API key |
-| `baseUrl` | `string` | `https://api.slim-file.com` | API base URL |
+| `baseUrl` | `string` | `https://slimfile-api.onrender.com` | API base URL |
 | `timeout` | `number` | `120000` | Request timeout in milliseconds |
 
 ---
@@ -229,9 +229,10 @@ console.log(`${result.files.length} files compressed, ${result.failedCount} fail
 
 ### `getStats()`
 
-Retrieve usage statistics for the current API key.
+Retrieve usage statistics for your account. Requires an active session — call `login()` or `signup()` first.
 
 ```ts
+await client.login('you@example.com', 'your-password')
 const stats = await client.getStats()
 ```
 

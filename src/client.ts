@@ -14,7 +14,7 @@ import type {
   Stats,
 } from './types.js'
 
-const DEFAULT_BASE_URL = 'https://api.slim-file.com'
+const DEFAULT_BASE_URL = 'https://slimfile-api.onrender.com'
 const DEFAULT_TIMEOUT = 120_000
 
 /**
@@ -77,10 +77,11 @@ export class SlimFileClient {
   // ─── Stats ────────────────────────────────────────────────────────────────
 
   /**
-   * Retrieve usage statistics for the current API key.
+   * Retrieve usage statistics for your account.
+   * Requires being logged in — call `login()` or `signup()` first.
    */
   getStats(): Promise<Stats> {
-    this.assertApiKey()
+    this.assertToken()
     return this.statsService.getStats()
   }
 
@@ -119,6 +120,12 @@ export class SlimFileClient {
   private assertApiKey(): void {
     if (!this.http.apiKey) {
       throw new AuthenticationError()
+    }
+  }
+
+  private assertToken(): void {
+    if (!this.http.token) {
+      throw new AuthenticationError('Not logged in. Call login() or signup() before getStats().')
     }
   }
 }
