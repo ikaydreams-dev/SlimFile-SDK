@@ -54,10 +54,10 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ikaydreams-dev/slimfile-sdk.git"
+    "url": "git+https://github.com/SlimFile-Limited-Company/SlimFile-SDK.git"
   },
   "bugs": {
-    "url": "https://github.com/ikaydreams-dev/slimfile-sdk/issues"
+    "url": "https://github.com/SlimFile-Limited-Company/SlimFile-SDK/issues"
   },
   "homepage": "https://api.slim-file.com",
   "engines": {
